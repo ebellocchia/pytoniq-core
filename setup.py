@@ -32,6 +32,7 @@ setuptools.setup(
         "requests>=2.31.0",
         "x25519>=0.0.2",
         "setuptools>=65.5.1",
-        "PyNaCl>=1.5.0"
+        "PyNaCl>=1.5.0",
+        "typing_extensions"
     ]
 )
