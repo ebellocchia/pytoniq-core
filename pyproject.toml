@@ -3,13 +3,14 @@ requires = ["setuptools>=65.5.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pytoniq-core"
+name = "pytoniq-core-fork"
 version = "0.1.47"
 description = "TON Blockchain SDK"
 readme = "README.md"
 requires-python = ">=3.7"
 authors = [
-    { name = "Maksim Kurbatov", email = "cyrbatoff@gmail.com" }
+    { name = "Maksim Kurbatov", email = "cyrbatoff@gmail.com" },
+    { name = "Emanuele Bellocchia", email = "ebellocchia@gmail.com" }
 ]
 classifiers = [
     "Programming Language :: Python :: 3.7",
@@ -19,12 +20,13 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Software Development :: Libraries",
 ]
 dynamic = ["dependencies"]
 
 [project.urls]
-Homepage = "https://github.com/yungwine/pytoniq"
+Homepage = "https://github.com/ebellocchia/pytoniq-core"
 
 [tool.setuptools.dynamic]
 dependencies = { file = ["requirements.txt"] }
