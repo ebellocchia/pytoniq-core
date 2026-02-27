@@ -4,9 +4,8 @@ import typing
 
 from ..tlb.block import Block, ShardStateUnsplit
 from ..tlb.config import ValidatorDescr, CatchainConfig, ValidatorSet
-from ..tl.block import BlockId, BlockIdExt
+from ..tl.block import BlockIdExt
 from ..crypto.signature import verify_sign
-from ..boc.tvm_bitarray import TvmBitarray
 from ..boc.exotic import CellTypes
 from ..boc.cell import Cell
 from ..boc.address import Address

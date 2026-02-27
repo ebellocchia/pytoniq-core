@@ -1,4 +1,3 @@
-import copy
 
 from .tlb import TlbScheme, TlbError
 from ..boc.slice import Slice

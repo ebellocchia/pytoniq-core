@@ -1,12 +1,10 @@
 import hashlib
-from bitarray import bitarray
 import typing
 
 from .. import Slice, CellTypes
 from ..address import Address
 from ..cell import Cell
 from ..builder import Builder
-from ..deserialize import NullCell
 
 from .utils import serialize_dict
 from .parse import parse_hashmap

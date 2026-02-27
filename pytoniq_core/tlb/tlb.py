@@ -1,5 +1,3 @@
-from ..boc.deserialize import NullCell
-from ..boc.address import Address
 from abc import ABC, abstractmethod
 
 

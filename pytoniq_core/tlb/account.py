@@ -2,7 +2,7 @@ import typing
 import typing_extensions
 
 from .tlb import TlbScheme, TlbError
-from .utils import MerkleUpdate, HashUpdate
+from .utils import HashUpdate
 from .. import begin_cell
 from ..boc import Slice, Builder, Cell
 from ..boc.address import Address

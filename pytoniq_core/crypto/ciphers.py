@@ -1,10 +1,8 @@
-import typing
 
 import hashlib
 import x25519
 
 from nacl.signing import SigningKey as ed25519Private, VerifyKey as ed25519Public
-from nacl.public import PublicKey as x25519Public, PrivateKey as x25519Private
 
 from Cryptodome.Random import get_random_bytes
 from Cryptodome.Cipher import AES

@@ -1,7 +1,6 @@
 import typing
 
 from .. import Slice, CellTypes
-from ..deserialize import NullCell
 
 from bitarray import bitarray
 

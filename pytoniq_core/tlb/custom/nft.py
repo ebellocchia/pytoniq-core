@@ -1,7 +1,7 @@
 import typing
 
 from ..tlb import TlbScheme
-from ...boc import Cell, Builder, Slice, HashMap, Address
+from ...boc import Cell, Builder, Slice, Address
 
 
 class NftItemData(TlbScheme):

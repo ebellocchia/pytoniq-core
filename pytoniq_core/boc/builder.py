@@ -142,7 +142,7 @@ class Builder(NullCell):
         return self
 
     def store_string(self, value: str):
-        assert len(value.encode()) <= 127, f'string byte length is more than 127, use .store_snake_string()'
+        assert len(value.encode()) <= 127, 'string byte length is more than 127, use .store_snake_string()'
         self._bits.frombytes(value.encode())
         return self
 

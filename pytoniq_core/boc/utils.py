@@ -1,4 +1,3 @@
-import typing
 
 
 def make_url_safe(str: str) -> str:

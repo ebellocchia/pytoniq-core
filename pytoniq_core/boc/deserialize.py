@@ -62,7 +62,7 @@ class NullCell:
         """
         text = ('* ' * (self.type_ != -1)) + f'{len(self.bits)}[{self.bits.tobytes().hex().upper()}]'
         if self.refs:
-            text += f' -> {{\n'
+            text += ' -> {\n'
             for index, ref in enumerate(self.refs):
                 next_comma = True if index != len(self.refs) - 1 else False
                 text += '\t' * t + ref.__str__(t + 1, next_comma) + '\n'

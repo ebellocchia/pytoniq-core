@@ -1,7 +1,6 @@
-from typing import Union, Iterable, overload
+from typing import Union, Iterable
 
 from bitarray import bitarray
-from bitarray.util import int2ba
 
 
 BytesLike = Union[bytes, Iterable[int]]
