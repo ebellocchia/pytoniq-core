@@ -14,13 +14,17 @@ setuptools.setup(
     packages=setuptools.find_packages('.', exclude=['.idea', 'tests', 'examples', 'pytoniq_core/tlb/generator.py']),
     include_package_data=True,
     classifiers=[
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
         "Topic :: Software Development :: Libraries",
     ],
     url="https://github.com/yungwine/pytoniq",
-    python_requires='>=3.9',
+    python_requires='>=3.7',
     py_modules=["pytoniq_core"],
     install_requires=[
         "pycryptodomex>=3.18.0",
