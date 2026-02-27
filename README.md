@@ -2,16 +2,14 @@
 
 This is a fork of [pytoniq-core](https://github.com/yungwine/pytoniq-core). It extends compatibility to Python 3.7, 3.8, and 3.9, as the original package strictly requires Python >= 3.10.
 
-[![PyPI version](https://badge.fury.io/py/pytoniq-core.svg)](https://badge.fury.io/py/pytoniq-core)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pytoniq-core)](https://pypi.org/project/pytoniq-core/)
-![](https://pepy.tech/badge/pytoniq-core)
-[![Downloads](https://static.pepy.tech/badge/pytoniq-core)](https://pepy.tech/project/pytoniq-core)
+[![PyPI version](https://badge.fury.io/py/pytoniq-core-fork.svg)](https://badge.fury.io/py/pytoniq-core-fork)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pytoniq-core-fork)](https://pypi.org/project/pytoniq-core-fork/)
 [![](https://img.shields.io/badge/%F0%9F%92%8E-TON-grey)](https://ton.org)
 
 ## Installation
 
 ```bash
-pip install pytoniq-core
+pip install pytoniq-core-fork
 ```
 
 ## Examples
