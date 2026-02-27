@@ -1,5 +1,4 @@
-import copy
-import typing
+import typing_extensions
 
 
 def crc16(data: bytes):
@@ -46,7 +45,7 @@ def crc16(data: bytes):
     return crc.to_bytes(2, 'big')
 
 
-def crc32c(data: bytes, byteorder: typing.Literal['big', 'little'] = 'little'):
+def crc32c(data: bytes, byteorder: typing_extensions.Literal['big', 'little'] = 'little'):
     # feat. https://web.mit.edu/freebsd/head/sys/libkern/crc32.c
 
     crc = 0xffffffff

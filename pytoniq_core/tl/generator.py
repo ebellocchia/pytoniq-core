@@ -2,6 +2,7 @@ import logging
 import re
 import zlib
 import typing
+import typing_extensions
 import os
 
 
@@ -92,7 +93,7 @@ class TlSchemas:
         #  schemas and their fields not to auto deserialize. In ADNL some schemes (like adnl.message.part or rldp ones)
         #  are not supposed to be auto deserialized, because it may cause some errors.
 
-    def get_by_id(self, tl_id: typing.Union[bytes, int], byteorder: typing.Literal['little', 'big'] = 'big') -> TlSchema:
+    def get_by_id(self, tl_id: typing.Union[bytes, int], byteorder: typing_extensions.Literal['little', 'big'] = 'big') -> TlSchema:
         """
         :param tl_id: id of TL schema
         :param byteorder: provided bytes or int order. if big nothing will happen, if little no matter int or bytes they will be converted
@@ -431,4 +432,3 @@ class TlGenerator:
                     temp = ''
                 result.append(self._registrator.register(stripped))
         return result
-

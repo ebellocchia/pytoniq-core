@@ -1,4 +1,5 @@
 import typing
+import typing_extensions
 
 from .tlb import TlbScheme, TlbError
 from .utils import MerkleUpdate, HashUpdate
@@ -65,7 +66,7 @@ class SimpleAccountState(TlbScheme):
     but not used anywhere outside of this library
     """
 
-    def __init__(self, type_: typing.Literal["uninitialized", "frozen", "active"],
+    def __init__(self, type_: typing_extensions.Literal["uninitialized", "frozen", "active"],
                  state_hash: typing.Optional[bytes] = None,
                  state_init: typing.Optional["StateInit"] = None,
                  ):
@@ -151,7 +152,7 @@ class StorageExtraInfo(TlbScheme):
     storage_extra_info$001 dict_hash:uint256 = StorageExtraInfo;
     """
 
-    def __init__(self, type_: typing.Literal["storage_extra_none", "storage_extra_info"], dict_hash: bytes = None):
+    def __init__(self, type_: typing_extensions.Literal["storage_extra_none", "storage_extra_info"], dict_hash: bytes = None):
         self.type_ = type_
         self.dict_hash = dict_hash
 
@@ -238,7 +239,7 @@ class AccountStorage(TlbScheme):
             .store_cell(self.balance.serialize()) \
             .store_cell(self.state.serialize())
 
-        return builder.end_cell() 
+        return builder.end_cell()
 
     @classmethod
     def deserialize(cls, cell_slice: Slice):
@@ -391,7 +392,7 @@ class AccountStatus(TlbScheme):
     acc_state_active$10 = AccountStatus;
     acc_state_nonexist$11 = AccountStatus;
     """
-    def __init__(self, type_: typing.Literal["uninitialized", "frozen", "active", "nonexist"]):
+    def __init__(self, type_: typing_extensions.Literal["uninitialized", "frozen", "active", "nonexist"]):
         self.type_ = type_
 
     def serialize(self) -> Cell:

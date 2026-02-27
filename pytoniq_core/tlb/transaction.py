@@ -1,4 +1,5 @@
 import typing
+import typing_extensions
 
 from .block import CurrencyCollection
 from .tlb import TlbScheme, TlbError
@@ -359,7 +360,7 @@ class AccStatusChange(TlbScheme):
     acst_frozen$10 = AccStatusChange;    // init -> frozen
     acst_deleted$11 = AccStatusChange;   // frozen -> deleted
     """
-    def __init__(self, type_: typing.Literal["unchanged", "frozen", "deleted"]):
+    def __init__(self, type_: typing_extensions.Literal["unchanged", "frozen", "deleted"]):
         self.type_ = type_
 
     @classmethod
@@ -384,7 +385,7 @@ class ComputeSkipReason(TlbScheme):
     cskip_no_gas$10 = ComputeSkipReason;
     cskip_suspended$110 = ComputeSkipReason;
     """
-    def __init__(self, type_: typing.Literal["no_state", "bad_state", "no_gas", "suspended"]):
+    def __init__(self, type_: typing_extensions.Literal["no_state", "bad_state", "no_gas", "suspended"]):
         self.type_ = type_
 
     @classmethod
@@ -477,7 +478,7 @@ class TrComputePhase(TlbScheme):
     ] = TrComputePhase;
     """
     def __init__(self,
-                 type_: typing.Literal["skipped", "vm"],
+                 type_: typing_extensions.Literal["skipped", "vm"],
                  reason: typing.Optional[ComputeSkipReason] = None,
                  success: bool = None,
                  msg_state_used: bool = None,
@@ -639,7 +640,7 @@ class TrBouncePhase(TlbScheme):
     msg_fees:Grams fwd_fees:Grams = TrBouncePhase;
     """
     def __init__(self,
-                 type_: typing.Literal["negfunds", "nofunds", "ok"],
+                 type_: typing_extensions.Literal["negfunds", "nofunds", "ok"],
                  msg_size: typing.Optional[StorageUsedShort] = None,
                  req_fwd_fees: typing.Optional[int] = None,
                  msg_fees: typing.Optional[int] = None,
@@ -1388,7 +1389,7 @@ class LibRef(TlbScheme):
     libref_hash$0 lib_hash:bits256 = LibRef;
     libref_ref$1 library:^Cell = LibRef;
     """
-    def __init__(self, type_: typing.Literal["libref_hash", "libref_ref"], lib_hash: bytes = None, library: Cell = None):
+    def __init__(self, type_: typing_extensions.Literal["libref_hash", "libref_ref"], lib_hash: bytes = None, library: Cell = None):
         self.type_ = type_
         self.lib_hash = lib_hash
         self.library = library
@@ -1416,7 +1417,7 @@ class OutAction(TlbScheme):
     action_change_library#26fa1dd4 mode:(## 7) libref:LibRef = OutAction;
     """
     def __init__(self,
-                    type_: typing.Literal["action_send_msg", "action_set_code", "action_reserve_currency", "action_change_library"],
+                    type_: typing_extensions.Literal["action_send_msg", "action_set_code", "action_reserve_currency", "action_change_library"],
                     mode: int = None,
                     out_msg: typing.Optional[MessageAny] = None,
                     new_code: Cell = None,
@@ -1465,7 +1466,7 @@ class OutList(TlbScheme):
     out_list$_ {n:#} prev:^(OutList n) action:OutAction = OutList (n + 1);
     """
 
-    def __init__(self, type_: typing.Literal["out_list_empty", "out_list"], actions: typing.List[OutAction] = None):
+    def __init__(self, type_: typing_extensions.Literal["out_list_empty", "out_list"], actions: typing.List[OutAction] = None):
         if actions is None:
             actions = []
         self.type_ = type_

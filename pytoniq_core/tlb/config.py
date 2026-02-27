@@ -1,4 +1,5 @@
 import typing
+import typing_extensions
 
 from .block import CurrencyCollection, ExtraCurrencyCollection, GlobalVersion
 from .tlb import TlbScheme, TlbError
@@ -312,7 +313,7 @@ class WorkchainFormat(TlbScheme):
     """
 
     def __init__(self,
-                 type_: typing.Literal["wfmt_basic", "wfmt_ext"],
+                 type_: typing_extensions.Literal["wfmt_basic", "wfmt_ext"],
                  vm_version: typing.Optional[int] = None,
                  vm_mode: typing.Optional[int] = None,
                  min_addr_len: typing.Optional[int] = None,
@@ -417,7 +418,7 @@ class WorkchainDescr(TlbScheme):
     """
 
     def __init__(self,
-                 type_: typing.Literal["workchain", "workchain_v2"],
+                 type_: typing_extensions.Literal["workchain", "workchain_v2"],
                  enabled_since: int,
                  actual_min_split: int,
                  min_split: int,
@@ -766,7 +767,7 @@ class GasLimitsPrices(TlbScheme):
     = GasLimitsPrices;
     """
     def __init__(self,
-                 type_: typing.Literal["gas_prices", "gas_prices_ext", "gas_flat_pfx"],
+                 type_: typing_extensions.Literal["gas_prices", "gas_prices_ext", "gas_flat_pfx"],
                  gas_price: typing.Optional[int] = None,
                  gas_limit: typing.Optional[int] = None,
                  gas_credit: typing.Optional[int] = None,
@@ -1046,7 +1047,7 @@ class CatchainConfig(TlbScheme):
     shard_validators_lifetime:uint32 shard_validators_num:uint32 = CatchainConfig;
     """
 
-    def __init__(self, type_: typing.Literal["catchain_config", "catchain_config_new"],
+    def __init__(self, type_: typing_extensions.Literal["catchain_config", "catchain_config_new"],
                  mc_catchain_lifetime: int,
                  shard_catchain_lifetime: int,
                  shard_validators_lifetime: int,
@@ -1135,7 +1136,7 @@ class ConsensusConfig(TlbScheme):
     proto_version:uint16 catchain_max_blocks_coeff:uint32 = ConsensusConfig;
     """
 
-    def __init__(self, type_: typing.Literal["consensus_config", "consensus_config_new", "consensus_config_v3", "consensus_config_v4"],
+    def __init__(self, type_: typing_extensions.Literal["consensus_config", "consensus_config_new", "consensus_config_v3", "consensus_config_v4"],
                  round_candidates: typing.Optional[int] = None,
                  next_candidate_delay_ms: typing.Optional[int] = None,
                  consensus_timeout_ms: typing.Optional[int] = None,
@@ -1649,7 +1650,7 @@ class JettonBridgeParams(TlbScheme):
     jetton_bridge_params_v1#01 bridge_address:bits256 oracles_address:bits256 oracles:(HashmapE 256 uint256) state_flags:uint8 prices:^JettonBridgePrices external_chain_address:bits256 = JettonBridgeParams;
     """
     def __init__(self,
-                 type_: typing.Literal["jetton_bridge_params_v0", "jetton_bridge_params_v1"],
+                 type_: typing_extensions.Literal["jetton_bridge_params_v0", "jetton_bridge_params_v1"],
                  bridge_address: bytes,
                  oracles_address: bytes,
                  oracles: dict,
@@ -1807,4 +1808,3 @@ class ConfigParam(TlbScheme):
     @classmethod
     def deserialize(cls, *args):
         pass
-
