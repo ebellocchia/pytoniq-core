@@ -37,7 +37,7 @@ jobs:
       run: |
         pytest
 
-  build:
+  build_py38_plus:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
