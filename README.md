@@ -4,7 +4,10 @@ This is a fork of [pytoniq-core](https://github.com/yungwine/pytoniq-core). It e
 
 [![PyPI version](https://badge.fury.io/py/pytoniq-core-fork.svg)](https://badge.fury.io/py/pytoniq-core-fork)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pytoniq-core-fork)](https://pypi.org/project/pytoniq-core-fork/)
+[![Python package](https://github.com/ebellocchia/pytoniq-core/actions/workflows/python-package.yml/badge.svg)](https://github.com/ebellocchia/pytoniq-core/actions/workflows/python-package.yml)
 [![](https://img.shields.io/badge/%F0%9F%92%8E-TON-grey)](https://ton.org)
+
+---
 
 ## Installation
 
